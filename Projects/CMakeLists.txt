@@ -1,0 +1,16 @@
+list(APPEND COMMON_DEPENDENCIES common_utils common_net common_thread)
+
+if (WIN32)
+    LIST(APPEND COMMON_DEPENDENCIES wsock32 ws2_32)
+elseif(LINUX)
+    LIST(APPEND COMMON_DEPENDENCIES pthread)
+endif()
+
+add_subdirectory(Lab01)
+add_subdirectory(Lab02)
+add_subdirectory(Lab03)
+add_subdirectory(Lab04)
+add_subdirectory(Lab05)
+add_subdirectory(Pr01)
+add_subdirectory(Pr03)
+add_subdirectory(Pr04)
